@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nlscan.uhf.demo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="24" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyAppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".InventoryActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/inventory_demo"/>
+        
+        <activity
+            android:name=".TagReadLockActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            android:label="@string/read_write_lock">
+            <intent-filter>
+                <action android:name="com.nlscan.intent.action.UHF_READ_WRITE_LOCK" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+         </activity>
+         
+        <activity
+            android:name=".UHFSilionSettingsMainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/uhf_settings">
+            <intent-filter>
+                <action android:name="com.nlscan.intent.action.UHF_PARAM_SETTING" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+         </activity>
+        
+        <!-- 盘点参数 -->
+         <activity
+            android:name=".settings.InventoryParamsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/inventory_params"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+         
+        <!-- 天线功率 -->
+         <activity
+            android:name=".settings.AntsPowerActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/ants_power"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+         
+          <!-- 区域频率 -->
+         <activity
+            android:name=".settings.RegionFreActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/region_freq"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+         
+         <!-- Gen2项 -->
+         <activity
+            android:name=".settings.Gen2Activity"
+            android:screenOrientation="portrait"
+            android:label="@string/gen2_item"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+         
+         <!-- 盘点过滤 -->
+         <activity
+            android:name=".settings.InventoryFilterActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/inventory_filter"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+         
+          <!-- 附加数据 -->
+         <activity
+            android:name=".settings.EmbedDataActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/addition_data"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+         
+         <!-- 其他参数 -->
+         <activity
+            android:name=".settings.OtherParamsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/other_params"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+         
+         <!-- 快速模式 -->
+         <activity
+            android:name=".settings.QuickModeActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/quick_mode"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+         
+    </application>
+
+</manifest>

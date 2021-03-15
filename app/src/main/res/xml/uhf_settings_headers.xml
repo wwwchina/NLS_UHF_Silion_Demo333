@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 上电 -->
+    <header
+        android:id="@+id/power_enable"
+        android:icon="@drawable/ic_launcher"
+        android:summary="@string/power_on_summary"
+        android:title="@string/power_on" />
+
+    <!-- 触发按键 -->
+    <header
+        android:id="@+id/trigger_mode"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/trigger_mode" 
+        android:fragment="com.nlscan.uhf.settings.TriggerModeSettingFragment"/>
+        
+    <!-- 盘点提示 -->
+     <header
+        android:id="@+id/inventory_prompt"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/scan_prompt" 
+        android:fragment="com.nlscan.uhf.settings.PromptSettingFragment"/>
+     
+    <!-- 盘点测试 -->
+    <header
+        android:id="@+id/inventory_demo"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/inventory_demo" >
+        <intent
+            android:targetClass="com.nlscan.uhf.demo.InventoryActivity"
+            android:targetPackage="com.nlscan.uhf.demo" />
+    </header>
+
+    <!-- 读写锁 -->
+    <header
+        android:id="@+id/read_write_lock"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/read_write_lock" >
+         <intent
+            android:targetClass="com.nlscan.uhf.demo.TagReadLockActivity"
+            android:targetPackage="com.nlscan.uhf.demo" />
+    </header>
+
+    <!-- 参数设置 -->
+    <header
+        android:id="@+id/uhf_func_settings"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/uhf_settings" >
+        <intent
+            android:targetClass="com.nlscan.uhf.demo.UHFSilionSettingsMainActivity"
+            android:targetPackage="com.nlscan.uhf.demo" />
+    </header>
+
+     <!-- 恢复默认配置 -->
+    <header
+        android:id="@+id/restore_default"
+        android:icon="@drawable/ic_launcher"
+        android:title="@string/restore_default"/>
+        
+</preference-headers>
