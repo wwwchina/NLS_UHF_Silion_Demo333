@@ -86,6 +86,7 @@
 
     <EditText
         android:id="@+id/editText_dataw"
+        android:text="7E0000000000054FE7000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10" />

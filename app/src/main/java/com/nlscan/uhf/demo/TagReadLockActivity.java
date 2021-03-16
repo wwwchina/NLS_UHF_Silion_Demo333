@@ -93,7 +93,7 @@ public class TagReadLockActivity extends BaseActivity {
 			    else
 			    	return check1;
 		}
-	 
+	 //设置编码格式
 	 private void SetOpant() 
 	 {
 		 	 opant=SortGroup(gr_opant)+1;
@@ -101,7 +101,7 @@ public class TagReadLockActivity extends BaseActivity {
 	 
 	 private void SetFiler()
 	 { 
-		 if(SortGroup(gr_enablefil)==1)
+		 if(SortGroup(gr_enablefil)==1)//过滤启用于不启用  1启用
 		 {  
 			 EditText et_fdata=(EditText)findViewById(R.id.editText_opfilterdata);
 			 EditText etadr=(EditText)findViewById(R.id.editText_opfilsadr);
@@ -268,9 +268,9 @@ public class TagReadLockActivity extends BaseActivity {
 					public void onClick(View arg0) {
 						// TODO Auto-generated method stub
 						try {
-							SetOpant();
-							SetPassword();
-							SetFiler();
+							SetOpant();//设置编码格式
+							SetPassword();//sHexPasswd
+							SetFiler();//过滤
 							
 							EditText etcount=(EditText)findViewById(R.id.editText_opcountr);
 							EditText etadr=(EditText)findViewById(R.id.editText_startaddr);
@@ -344,6 +344,7 @@ public class TagReadLockActivity extends BaseActivity {
 							if(SortGroup(gr_wdatatype)==0)
 							{
 								String sHexData = EditText_sub3wdata.getText().toString();
+								sHexData=ByteUtil.str2HexString(sHexData);
 								data = UHFReader.Str2Hex(sHexData);
 							}else if(SortGroup(gr_wdatatype)==1){
 								String ascstr=EditText_sub3wdata.getText().toString();
